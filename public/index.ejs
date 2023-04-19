@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer type="module" src="/js/index.js"></script>
+    <title>Aufgabe Dimitri Pisarev</title>
+</head>
+<body style="background-color: <%= primaryColor %>;">
+    <form class="form" method="POST" action="/submit-form">
+        <h2 class="form__title">Farbeauswahl</h2>
+        <label for="colorCode">Geben Sie Farbcode ein:</label>
+        <input class="input__code" name="input" id="colorCode" name="colorCode" placeholder="#FFFFFF">
+        <p class="form__text">oder wählen Sie eine aus:</p>
+        <label for="colorPic">Farbe:</label>
+        <input class="input__select" type="color" id="colorSelect" name="colorPic"></input>
+        <button class="btn btn__save">Speichern</button>
+        <div class="contact">
+            <span class="contact__text">Feedback</span>
+            <a class="contact__link" href="mailto:info@dimitripisarev.com">info@dimitripisarev.com</span>
+        </div>
+    </form>
+</body>
+</html>
+

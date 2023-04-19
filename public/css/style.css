@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color: #78788c;
+    --radius: 5px;
+}
+body {
+    background-color: #59ABE3;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form {
+    width: 330px;
+    height: 400px;
+    background-color: #e6e6e6;
+    border-radius: var(--radius);
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(50vh - 200px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    
+    position: relative;
+    
+}
+.form__title {
+    margin: 10px 0;
+    padding-bottom: 3px;
+    width: 180px;
+    color: var(--color);
+    border-bottom: 3px solid var(--color)
+}
+
+/*---INPUTS---*/
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: var(--radius);
+    outline: none;
+    resize: none;
+    border: 0;
+    transition: all .3s;;
+    margin-bottom: 1rem;
+}
+.input__select{
+    cursor: pointer;
+}
+label{
+    display: block;
+    margin: 1rem 0;
+}
+.form__text{
+    font-style: italic;
+}
+/*----------------------------------------*/
+
+/*---BUTTONS---*/
+button {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid var(--color);
+    color: #5a5a6e;
+    cursor: pointer;
+    transition: all .2s
+}
+button:hover {
+    background-color: var(--color);
+    color: #fff
+}
+/*----------------------------------------*/
+
+
+
+/*---Contact---*/
+.contact {
+    content: 'feedback';
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    background: #50505a;
+    color: #fff;
+    width: 320px;
+    padding: 1rem 4px 1rem 0;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    box-shadow: 10px 10px 40px -14px #000
+}
+
+.contact__text {
+    margin: 0 5px 0 15px
+}
+
+.contact__link{
+    color: #fff;
+    text-decoration: none;
+
+    transition: color .2s ease;
+}
+.contact__link:hover{
+    color: var(--color);
+}
+
+/*----------------------------------------*/
+
+
