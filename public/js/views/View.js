@@ -7,7 +7,6 @@ export default class View {
     return query;
   }
 
-  
   clearInputField = () => {
     this._inputEl.value = "";
   };
@@ -16,4 +15,5 @@ export default class View {
       this.clearInputField();
     }
   }
+  
 };

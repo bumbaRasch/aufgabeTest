@@ -3,7 +3,8 @@ import resultsView from "./views/resultsView.js";
 import viewController from "./views/viewController.js";
 
 const controlInputColor = function () {
-  resultsView.changeColor();
+  const colorSelect = document.querySelector("#colorSelect").value;
+  resultsView.changeColor(`Sie haben diese Farbe ausgewählt: ${colorSelect}`);
   setTimeout(function () {
 
     resultsView.alertWindow('test 1');

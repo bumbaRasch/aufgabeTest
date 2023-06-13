@@ -1,9 +1,10 @@
 import View from "./View.js";
-
+import ResultsView from "./resultsView.js";
 import { AJAX } from "../helpers.js";
 
 class ViewController extends View {
   _saveBtn = document.querySelector(".btn__save");
+  _parentElement = document.querySelector("body");
 
   saveColorDB() {
     this._saveBtn.addEventListener("click", this.getInfo.bind(this));
@@ -13,7 +14,7 @@ class ViewController extends View {
     e.preventDefault();
     const baseUrl = location.href + "submit-form";
     AJAX(baseUrl);
-    this.alertWindow2();
+    ResultsView.alertWindow("Ihre Farbe war erfolgreich gespeichert");
     //alert(`Sie haben diese Farbe erfolgreich gespeichert`);
   }
 
@@ -21,15 +22,6 @@ class ViewController extends View {
     document.addEventListener("keydown", this.closeEscape.bind(this));
   }
 
- alertWindow2() {
-  const query = "Der ausgewählte Farbton wurde erfolgreich gespeichert.";
-  const modalWindowText = document.querySelector(".modalWindow_text");
-  const modalWindow = document.querySelector(".modalWindow");
-  modalWindowText.textContent = query;
-  modalWindow.style.display = "block";
-}
-
-  
 };
 
 export default new ViewController();

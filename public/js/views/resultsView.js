@@ -13,24 +13,15 @@ class ResultsView extends View {
   }
 
   alertWindow(text) {
+    const modalWindow = document.createElement("div");
+    modalWindow.className = "modalWindow";
+    modalWindow.innerHTML = `<h3 class="modalWindow_text">${text}</h3>`;
 
-// Sie haben diese Farbe ausgewählt: ${query}
+    this._parentElement.insertAdjacentElement("afterbegin", modalWindow);
 
-
-    //const query = this.getQuery();
-    const modalWindowHtml = `
-      <div class="modalWindow">
-        <h3 class="modalWindow_text">${text}</h3>
-      </div>`;
-
-    this._parentElement.insertAdjacentHTML('afterbegin', modalWindowHtml);
     setTimeout(() => {
-    const modalWindow = document.querySelector('.modalWindow');
-    if (modalWindow) {
       modalWindow.remove();
-    }
-  }, 8000);
-    
+    }, 4000);
   }
 };
 
