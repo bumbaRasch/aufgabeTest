@@ -11,14 +11,25 @@ class ViewController extends View {
 
   getInfo(e) {
     e.preventDefault();
-    const baseUrl = "http://127.0.0.1:3030/submit-form";
+    const baseUrl = location.href + "submit-form";
     AJAX(baseUrl);
-    alert(`Sie haben diese Farbe erfolgreich gespeichert`);
+    this.alertWindow2();
+    //alert(`Sie haben diese Farbe erfolgreich gespeichert`);
   }
 
   handleEscapeKey() {
     document.addEventListener("keydown", this.closeEscape.bind(this));
   }
+
+ alertWindow2() {
+  const query = "Der ausgewählte Farbton wurde erfolgreich gespeichert.";
+  const modalWindowText = document.querySelector(".modalWindow_text");
+  const modalWindow = document.querySelector(".modalWindow");
+  modalWindowText.textContent = query;
+  modalWindow.style.display = "block";
+}
+
+  
 };
 
 export default new ViewController();

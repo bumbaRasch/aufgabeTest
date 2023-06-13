@@ -5,13 +5,15 @@ import viewController from "./views/viewController.js";
 const controlInputColor = function () {
   resultsView.changeColor();
   setTimeout(function () {
-    resultsView.alertWindow();
+
+    resultsView.alertWindow('test 1');
   }, 500);
 };
 const controlSelectColor = function () {
+  const colorSelect = document.querySelector("#colorSelect").value;
   resultsView.changePicColor();
   setTimeout(function () {
-    resultsView.alertWindow();
+    resultsView.alertWindow(`Sie haben diese Farbe ausgewählt: ${colorSelect}`);
   }, 500);
 };
 

@@ -12,11 +12,27 @@ class ResultsView extends View {
       document.querySelector("#colorSelect").value;
   }
 
-  alertWindow() {
-    const query = this.getQuery();
-    alert(`Sie haben diese Farbe ausgewählt: ${query}`); // oder modal Window
-    alert(`Wenn Sie diese Farbe ${query} speichern möchten, drücken Sie bitte auf das "Speichern"`);
+  alertWindow(text) {
+
+// Sie haben diese Farbe ausgewählt: ${query}
+
+
+    //const query = this.getQuery();
+    const modalWindowHtml = `
+      <div class="modalWindow">
+        <h3 class="modalWindow_text">${text}</h3>
+      </div>`;
+
+    this._parentElement.insertAdjacentHTML('afterbegin', modalWindowHtml);
+    setTimeout(() => {
+    const modalWindow = document.querySelector('.modalWindow');
+    if (modalWindow) {
+      modalWindow.remove();
+    }
+  }, 8000);
+    
   }
 };
+
 
 export default new ResultsView();

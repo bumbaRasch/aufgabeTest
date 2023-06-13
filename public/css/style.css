@@ -108,4 +108,47 @@ button:hover {
 
 /*----------------------------------------*/
 
+/*-----------------------------------------*/
 
+
+.modalWindow{
+    position: absolute;
+    top: 8%;
+    left: 0;
+    opacity: 0;
+    animation: fade 6s ease-in-out;;
+    background-color: palegreen;
+    border-radius: 4px;
+
+    width: 100%;
+}
+
+.modalWindow > h3 {
+    padding: 20px;
+    background-color: yellow;
+    text-align: center;
+}
+
+
+
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
